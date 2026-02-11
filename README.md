@@ -1,65 +1,77 @@
-# [Computer Graphics](https://www4.ceda.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?EVN_DETTAGLIO_RIGA_MANIFESTO=evento&aa=2024&k_cf=225&k_corso_la=481&k_indir=T2A&codDescr=090958&lang=IT&semestre=2&idGruppo=4935&idRiga=308193) Project 2023-2024
+# 3D City Exploration - Computer Graphics 2024
 
-This project is the final test of "Computer Graphics", course of "Computer Science Engineering" held at Politecnico di Milano (2023/2024).
+[![C++](https://img.shields.io/badge/C++-17-blue?style=flat-square&logo=c%2B%2B)](https://isocpp.org/)
+[![OpenGL](https://img.shields.io/badge/OpenGL-4.x-red?style=flat-square&logo=opengl)](https://www.opengl.org/)
+[![Visual Studio](https://img.shields.io/badge/IDE-Visual%20Studio-purple?style=flat-square&logo=visual-studio)](https://visualstudio.microsoft.com/)
 
-**Teacher**: Marco Gribaudo
+This project is the final assignment for the **Computer Graphics** course at **Politecnico di Milano** (A.Y. 2023/2024). It features an interactive 3D urban environment where users can explore, interact with buildings, and drive a vehicle with realistic camera projections.
 
-**Final Score**: 30/30
+**Teacher**: Marco Gribaudo  
+**Final Score**: 30 / 30
 
-## Team Composition
-- [Alessandro Fornara](https://github.com/AlessandroFornara)
-- [Donato Fiore](https://github.com/DoneyMoney)
-- [Riccardo Figini](https://github.com/RiccardoFigini)
+---
 
-## Project Specification
-We developed a 3D application that showcases the techniques learned during the course. 
-The project features a small virtual city where players can explore, 
-interact with some buildings (a shop and an apartment), and drive a car.
+## 📋 Official Documentation
+For a detailed look at the project requirements and the technical guidelines provided by the university, you can consult the official assignment file:
 
-## Implemented Functionalities
-| Category              | Functionality                                                              |
-|:----------------------|:---------------------------------------------------------------------------|
-| 🏙️ Environment       | 3D City Environment                                                        |
-|                       | Interactive Buildings                                                      |
-| 🕹️ Player Mechanics  | Movement (Walk, Run, Jump)                                                 |
-|                       | Spectator Mode                                                             |
-| 🚗 Vehicle Mechanics  | Vehicle Mechanics (Enter/Drive/Exit Car)                                   | 
-|                       | First-Person/Third-Person/Isometric/Dimetric/Trimetric views for the car   | 
-| 🎮 Controls           | Joypad Integration                                                         | 
+👉 [**Project Assignment (PDF)**](./Projects_rules.pdf)
 
-You can find the full specification [here](https://github.com/AlessandroFornara/ComputerGraphicsProject2024/tree/master/Specs).
+---
 
-## Controls:
-- Press <kbd>H</kbd> (Keyboard) / <kbd>START</kbd> (Gamepad) to see the command list
-#### Keyboard:
-- Press <kbd>SHIFT</kbd> to run. 
-- Press <kbd>SPACE</kbd> to jump. 
-- Press <kbd>L</kbd> to print coordinates. 
-- Press <kbd>P</kbd> to enter spectator mode. 
-- Press <kbd>O</kbd> to exit spectator mode. 
-- Press <kbd>K</kbd> to check doors / enter car. 
-- Press <kbd>J</kbd> to exit car. 
-- In the car:
-  - Press <kbd>B</kbd> to switch to first-person view. 
-  - Press <kbd>V</kbd> to switch to third-person view. 
-  - Press <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> to switch to isometric/dimetric/trimetric view. 
-- Press <kbd>G</kbd> to close this text. 
-- Press <kbd>ESC</kbd> to exit.
+## 🚀 Key Technical Features
 
-#### Gamepad:
-- Press <kbd>RIGHT BUMPER</kbd> to run. 
-- Press <kbd>LEFT BUMPER</kbd> to jump. 
-- Press <kbd>D-PAD UP</kbd> to enter spectator mode. 
-- Press <kbd>D-PAD DOWN</kbd> to exit spectator mode. 
-- Press <kbd>A</kbd> to check doors / enter car. 
-- Press <kbd>B</kbd> to exit car. 
-- Press <kbd>BACK</kbd> to close this text. 
-- In the car:
-  - Press <kbd>D-PAD LEFT</kbd> to switch to first-person view. 
-  - Press <kbd>D-PAD RIGHT</kbd> to switch to third-person view. 
-  - Press <kbd>X</kbd> to switch to isometric view. 
-  - Press <kbd>Y</kbd> to switch to dimetric view. 
-  - Press <kbd>RIGHT THUMB</kbd> to switch to trimetric view.
+### 🏙️ Environment & Rendering
+* **3D Urban Simulation**: A detailed virtual city featuring modular buildings and navigable streets.
+* **Interactive Interiors**: Seamless transition and interaction with specific building interiors, such as a shop and an apartment.
+* **Advanced Lighting**: Real-time lighting implementation using custom **GLSL shaders** (Phong/Blinn-Phong) for realistic surface reflections.
 
-## Software Used
-**Visual Studio 2022** - main IDE
+### 🎥 Sophisticated Camera System
+The project implements a versatile camera system with real-time switching between:
+* **Standard Views**: First-person and Third-person perspectives for immersive exploration.
+* **Axonometric Projections**: Mathematically precise implementation of **Isometric**, **Dimetric**, and **Trimetric** views for the vehicle mechanics.
+* **Spectator Mode**: Free-roaming camera for environment inspection.
+
+### 🚗 Mechanics & Input Integration
+* **Vehicle System**: Complex state management for entering, driving, and exiting vehicles.
+* **Player Physics**: Core movement mechanics including walking, running, and jumping with collision handling.
+* **Dual Input Support**: Full integration of **Keyboard** and **Gamepad (Joypad)** for all actions, from navigation to UI management.
+
+---
+
+## 🎮 Controls
+Press <kbd>H</kbd> (Keyboard) or <kbd>START</kbd> (Gamepad) to see the command list.
+
+### Keyboard:
+* **Movement**: <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>
+* **Run / Jump**: <kbd>SHIFT</kbd> / <kbd>SPACE</kbd>
+* **Coordinates**: Press <kbd>L</kbd> to print current coordinates.
+* **Spectator Mode**: <kbd>P</kbd> to enter, <kbd>O</kbd> to exit.
+* **Interactions**: <kbd>K</kbd> to enter car/check doors, <kbd>J</kbd> to exit car.
+* **Vehicle Views**: <kbd>B</kbd> (1st Person), <kbd>V</kbd> (3rd Person), <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> (Axonometric).
+* **UI**: <kbd>G</kbd> to close overlay text, <kbd>ESC</kbd> to exit.
+
+### Gamepad:
+* **Movement**: <kbd>Left Stick</kbd>
+* **Run / Jump**: <kbd>RB</kbd> / <kbd>LB</kbd>
+* **Spectator Mode**: <kbd>D-PAD UP</kbd> to enter, <kbd>D-PAD DOWN</kbd> to exit.
+* **Interactions**: <kbd>A</kbd> to enter car, <kbd>B</kbd> to exit car.
+* **Vehicle Views**: <kbd>D-PAD LEFT/RIGHT</kbd>, <kbd>X</kbd>, <kbd>Y</kbd>, <kbd>Right Thumb (Click)</kbd>.
+
+---
+
+## 🛠️ Software Stack
+* **Language**: C++17
+* **API**: OpenGL 4.x
+* **IDE**: Visual Studio 2022
+
+---
+
+## 👥 Team Composition
+* [Alessandro Fornara](https://github.com/AlessandroFornara)
+* [Donato Fiore](https://github.com/DoneyMoney)
+* [Riccardo Figini](https://github.com/RiccardoFigini)
+
+---
+
+## ⚖️ License
+This project is for educational purposes as part of the Politecnico di Milano curriculum.
